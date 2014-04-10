@@ -75,7 +75,32 @@ public class PiggyBank {
       newCents += newCents % 100;
     }
 
+    if (newCents < 0) {
+      newDollars--;
+      newCents = 100 + newCents;
+    }
+
+    if (newDollars < 0) {
+      System.out.println("Error: No money");
+      return new PiggyBank(this._dollars, this._cents);
+    }
+
     return new PiggyBank(newDollars, newCents);
+  }
+
+  /**
+   * Draw money from the piggy bank.
+   *
+   * @param dollars
+   *  Number of dollars to draw from the piggy bank.
+   * @param cents
+   *  Number of cents to draw from the piggy bank.
+   *
+   * @return PiggyBank
+   *  The amount
+   */
+  public PiggyBank withDrawhMoney(int dollars, int cents) {
+    return this.addMoney(-dollars, -cents);
   }
 
   /**
