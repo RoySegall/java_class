@@ -4,7 +4,6 @@ public class Password {
 
   public static void main(String args[]) {
     final String PASSWORD = "querty";
-    String userPassword;
     Scanner scan = new Scanner(System.in);
 
     System.out.println("Please enter a your password");
