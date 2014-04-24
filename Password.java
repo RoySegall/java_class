@@ -3,17 +3,15 @@ import java.util.Scanner;
 public class Password {
 
   public static void main(String args[]) {
-    final String PASSWORD = "querty";
+    final String PASSWORD = "qwerty";
     Scanner scan = new Scanner(System.in);
+    String userPassword;
 
-    System.out.println("Please enter a your password");
-    String pass = scan.next();
+    do {
+      System.out.println("Please enter password");
+      userPassword = scan.next();
+    } while (!userPassword.equals(PASSWORD));
 
-    while (!pass.equals(PASSWORD)) {
-      System.out.println("The password not match to the correct password.");
-      pass = scan.next();
-    }
-
-    System.out.print("Correct! you are in.");
+    System.out.println("You are in");
   }
 }
