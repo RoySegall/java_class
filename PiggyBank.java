@@ -103,6 +103,10 @@ public class PiggyBank {
     return this.addMoney(-dollars, -cents);
   }
 
+  public boolean richer(PiggyBank otherPiggy) {
+    return (this._dollars + this._cents) > (otherPiggy._dollars + otherPiggy._cents);
+  }
+
   /**
    * Print to the user the amount of money he have in the piggy bank.
    */
