@@ -10,20 +10,14 @@ public class PrimaryFor {
 
     System.out.println("Please enter a number");
     number = scan.nextInt();
-    boolean isPrime = true;
 
     for (int i = 2; i < number; i++) {
       if (number % i == 0) {
-        isPrime = false;
-        break;
+        System.out.println("Not prime");
+        return;
       }
     }
 
-    if (isPrime) {
-      System.out.println("The number is prime");
-    }
-    else {
-      System.out.println("Not prime");
-    }
+    System.out.println("The number is prime");
   }
 }
