@@ -11,7 +11,9 @@ public class PrimaryFor {
     System.out.println("Please enter a number");
     number = scan.nextInt();
 
-    for (int i = 2; i < number; i++) {
+    // We don't to run until the number. We can just check until the half of
+    // number and improve the run time.
+    for (int i = 2; i < number / 2; i++) {
       if (number % i == 0) {
         System.out.println("Not prime");
         return;
