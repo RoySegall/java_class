@@ -13,7 +13,7 @@ public class PrimaryFor {
 
     // We don't to run until the number. We can just check until the half of
     // number and improve the run time.
-    for (int i = 2; i < number / 2; i++) {
+    for (int i = 2; i <= Math.sqrt(number) / 2; i++) {
       if (number % i == 0) {
         System.out.println("Not prime");
         return;
