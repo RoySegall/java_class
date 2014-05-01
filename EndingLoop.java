@@ -6,22 +6,14 @@ public class EndingLoop {
 
     Scanner scan = new Scanner(System.in);
 
-    int grade;
-    int gradeCounter = 0;
-    int sum = 0;
-    double average = 0;
-    System.out.println("Enter the grades (Use ctrl z to stop)");
+    double[] numbers = new double[13];
 
-    while (scan.hasNext()) {
-      grade = scan.nextInt();
-      sum += grade;
-      gradeCounter++;
+    System.out.println("Enter ten numbers");
+
+    for (int i = 0; i < 10; i++) {
+      numbers[i] = scan.nextDouble();
     }
 
-    if (gradeCounter > 0) {
-      average = sum / gradeCounter;
-    }
-
-    System.out.println(average);
+    System.out.println(numbers[9]);
   }
 }
