@@ -8,4 +8,19 @@ public class Movie extends Video {
     this._director = director;
     this._rating = rating;
   }
+
+  public Movie(String title, String director, String rating) {
+    super(title);
+    this._director = director;
+    this._rating = rating;
+  }
+
+  public void show() {
+    String str = "The movie " + this._title;
+    str += " directed by " + this._director;
+    str += " with a rating of " + this._rating;
+    str += " and is " + this._length + " long.";
+
+    System.out.println(str);
+  }
 }
