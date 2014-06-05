@@ -16,10 +16,10 @@ public class Movie extends Video {
   }
 
   public void show() {
-    String str = "The movie " + this._title;
-    str += " directed by " + this._director;
+    super.show();
+
+    String str = " directed by " + this._director;
     str += " with a rating of " + this._rating;
-    str += " and is " + this._length + " long.";
 
     System.out.println(str);
   }
