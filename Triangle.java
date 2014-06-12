@@ -16,8 +16,17 @@ public class Triangle {
     return n * factorial(n - 1);
   }
 
+  public static int plus(int number, int times) {
+    if (times == 1) {
+      return number;
+    }
+
+    return number + plus(number, times - 1);
+  }
+
   public static void main(String[] args) {
     System.out.println(triangle(10));
     System.out.println(factorial(6));
+    System.out.println(plus(5, 5));
   }
 }
